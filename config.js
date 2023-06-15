@@ -1,5 +1,5 @@
 const PAGE_URL = process.env.NODE_ENV === 'production'
-  ? 'https://agendasimple.onrender.comgit'
+  ? 'https://agendasimple.onrender.com'
   : 'http://localhost:3003';
 
   const MONGO_URI = process.env.NODE_ENV === 'production'
