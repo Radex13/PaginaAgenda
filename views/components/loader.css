@@ -12,10 +12,11 @@
   }
 
   #spinner-container-close {
+    width: 12rem;
     display: none;
     justify-content: center;
     align-items: center;
-    height: 2.5rem;
+    height: 2.3rem;
   }
   
   .spinner {

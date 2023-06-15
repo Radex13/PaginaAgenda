@@ -1,6 +1,4 @@
 const navbar = document.querySelector('#navbar');
-const spinner = document.querySelector('#spinner-container-close');
-const button = document.getElementById('button-close');
 
 const createHomeNav = () => {
     // como agregar clases en tailwind
@@ -178,24 +176,17 @@ closeBtnMobile.addEventListener('click', async e => {
   }
 })
 
-function spinnerShow() {
-  button.innerHTML = '';
-  spinner.style.display = 'flex';
-}
-
-function spinnerHidden() {
-  spinner.style.display = 'none';
-  button.innerHTML = 'Crear contacto';
-}
-
 closeBtnDesktop.addEventListener('click', async e => {
+  const button = e.target;
+  const spinner = button.querySelector('#spinner-container-close');
   try {
-    spinnerShow();
+    spinner.style.display = 'flex';
+    button.querySelector('span').textContent = '';
     await axios.get('/api/logout');
     window.location.pathname = '/login';
-    spinnerHidden();
   } catch (error) {
-    console.log(error);
-    spinnerHidden();
+    spinner.style.display = 'none';
+    button.querySelector('span').textContent = 'Cerrar sesion';
+    console.log(error);    
   }
 })

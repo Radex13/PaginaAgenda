@@ -12,7 +12,7 @@ function spinnerShow() {
 
 function spinnerHidden() {
   spinner.style.display = 'none';
-  button.innerHTML = 'Registrar';
+  button.innerHTML = 'Iniciar sesion';
 }
 
 form.addEventListener('submit', async e => {
